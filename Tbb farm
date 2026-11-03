@@ -1,12 +1,493 @@
-local args = {
-    [1] = "Chapter1";
-    [2] = 4;
-    [3] = 1;
-    [4] = 1;
-    [5] = false;
-    [6] = {};
-    [7] = false;
-    [8] = 1;
+local vu1 = Instance.new("ScreenGui")
+vu1.Name = "PasswordGui"
+vu1.Parent = game.Players.LocalPlayer.PlayerGui
+local v2 = Instance.new("Frame")
+v2.Size = UDim2.new(0.4, 0, 0.5, 0)
+v2.Position = UDim2.new(0.3, 0, 0.25, 0)
+v2.BackgroundColor3 = Color3.new(0, 0, 0)
+v2.Parent = vu1
+local v3 = Instance.new("TextLabel")
+v3.Size = UDim2.new(1, 0, 0.1, 0)
+v3.BackgroundTransparency = 1
+v3.TextColor3 = Color3.new(0.5, 0.5, 0.5)
+v3.Font = Enum.Font.SourceSansBold
+v3.TextSize = 16
+v3.Text = "ShuiJiao"
+v3.Position = UDim2.new(0, 0, 0.05, 0)
+v3.Parent = v2
+local v4 = Instance.new("TextLabel")
+v4.Size = UDim2.new(1, 0, 0.3, 0)
+v4.BackgroundTransparency = 1
+v4.TextColor3 = Color3.new(1, 1, 1)
+v4.Font = Enum.Font.SourceSansBold
+v4.TextSize = 20
+v4.Text = "\239\191\189\239\191\189\232\191\142\228\189\191\231\148\168\232\132\154\230\156\172"
+v4.Position = UDim2.new(0, 0, 0.2, 0)
+v4.Parent = v2
+local vu5 = Instance.new("TextBox")
+vu5.Size = UDim2.new(1, 0, 0.2, 0)
+vu5.Position = UDim2.new(0, 0, 0.5, 0)
+vu5.BackgroundColor3 = Color3.new(0.5, 0.5, 0.5)
+vu5.TextColor3 = Color3.new(1, 1, 1)
+vu5.Font = Enum.Font.SourceSans
+vu5.TextSize = 18
+vu5.Text = "\239\191\189\239\191\189\229\133\165\229\141\161\229\175\134"
+vu5.Parent = v2
+local v6 = Instance.new("TextButton")
+v6.Size = UDim2.new(0.3, 0, 0.2, 0)
+v6.Position = UDim2.new(0.35, 0, 0.75, 0)
+v6.BackgroundColor3 = Color3.new(0, 0.5, 0)
+v6.TextColor3 = Color3.new(1, 1, 1)
+v6.Font = Enum.Font.SourceSansBold
+v6.TextSize = 20
+v6.Text = "\239\191\189\239\191\189\232\174\164\229\141\161\229\175\134"
+v6.Parent = v2
+local v7 = Instance.new("TextButton")
+v7.Size = UDim2.new(0.1, 0, 0.1, 0)
+v7.Position = UDim2.new(0.9, 0, 0, 0)
+v7.BackgroundColor3 = Color3.new(1, 0, 0)
+v7.TextColor3 = Color3.new(1, 1, 1)
+v7.Font = Enum.Font.SourceSansBold
+v7.TextSize = 24
+v7.Text = "X"
+v7.Parent = v2
+local vu8 = Instance.new("TextLabel")
+vu8.Size = UDim2.new(1, 0, 0.1, 0)
+vu8.Position = UDim2.new(0, 0, 0, 0)
+vu8.BackgroundTransparency = 1
+vu8.TextColor3 = Color3.new(0, 1, 0)
+vu8.Font = Enum.Font.SourceSansBold
+vu8.TextSize = 20
+vu8.Text = "\239\191\189\239\191\189\229\175\134\233\170\140\232\175\129\230\136\144\229\138\159\239\188\129"
+vu8.Visible = false
+vu8.Parent = vu1
+local vu9 = {
+    ["188484lele"] = "iyoulin",
+    xiaoniu360 = "xiaoniu360",
+    koboyads = "koboyads",
+    ha1234_4 = "ha1234_4",
+    DG_TCAT = "DG_TCAT",
+    rybjsu123 = "rybjsu123",
+    gta5yyd = "gta5yyd",
+    lzs2009111 = "lzs2009111",
+    BHGnxaen = "BHGnxaen",
+    qwermk47 = "qwermk47",
+    qixing002 = "qixing002",
+    qweasd1A26 = "qweasd1A26",
+    jntmqw_ji = "jntmqw_ji",
+    cqlsao114514 = "cqlsao114514",
+    RL_KOPG038 = "RL_KOPG038",
+    Tim_woiwroblox = "Tim_woiwroblox",
+    Roblox003809 = "Roblox003809",
+    cqlsao114514 = "cqlsao114514",
+    mkjgihhv = "mkjgihhv",
+    snnsdnsjsjdjdjd = "snnsdnsjsjdjdjd",
+    Chinagoo2 = "Chinagoo2",
+    Reb18980 = "Reb18980",
+    emo_vnm = "emo_vnm",
+    sjjdidnskd = "sjjdidnskd",
+    aikhsjsla = "aikhsjsla",
+    QSCHVC50 = "QSCHVC50",
+    lmdogThings = "lmdogThings",
+    ["02_TheGalaxy"] = "02_TheGalaxy",
+    LRZ_1003 = "LRZ_1003",
+    jinmeitong123 = "jinmeitong123",
+    wssbwcnmgsb = "wssbwcnmgsb",
+    WAING1234124 = "WAING1234124",
 }
-
-game:GetService("ReplicatedStorage"):WaitForChild("Events", 9e9):WaitForChild("RemoteFunction", 9e9):WaitForChild("StartBattle", 9e9):InvokeServer(unpack(args))
+local function vu11(p10)
+    game.Players.LocalPlayer:Kick("\239\191\189\239\191\189\229\155\160: " .. p10)
+end
+local function v93()
+    local v12 = vu9[game.Players.LocalPlayer.Name]
+    if v12 then
+        vu5.Text = v12
+        if vu5.Text ~= v12 then
+            vu5.Text = "\239\191\189\239\191\189\229\175\134\233\148\153\232\175\175"
+            wait(2)
+            vu11("\239\191\189\239\191\189\229\175\134\233\148\153\232\175\175")
+        else
+            vu8.Visible = true
+            wait(2)
+            vu8.Visible = false
+            vu1:Destroy()
+            local v13 = loadstring(game:HttpGet("https://raw.githubusercontent.com/iyoulin/iyoulin/refs/heads/main/ato"))()
+            game:GetService("VirtualUser")
+            game:GetService("Players")
+            game:GetService("RunService")
+            game:GetService("Lighting")
+            if switchLoop then
+                switchLoop:Disconnect()
+                switchLoop = nil
+            end
+            if state then
+                local vu14 = true
+                switchLoop = game:GetService("RunService").Heartbeat:Connect(function()
+                end)
+                switchLoop:Disconnect()
+                switchLoop = nil
+                local v15 = coroutine.create(function()
+                    while vu14 and (_G.switchServers and state) do
+                        for _ = 1, 60 do
+                            if not (vu14 and (_G.switchServers and state)) then
+                                break
+                            end
+                            task.wait(1)
+                        end
+                        if not (vu14 and (_G.switchServers and state)) then
+                            break
+                        end
+                        pcall(findNewServer)
+                    end
+                end)
+                coroutine.resume(v15)
+                switchLoop = game:GetService("RunService").Heartbeat:Connect(function()
+                end)
+                switchLoop:Disconnect()
+            end
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(- 8775.1904296875, 256.52142333984375, - 5853.55322265625)
+            local v16 = Instance.new("Part")
+            v16.Parent = workspace
+            v16.CFrame = CFrame.new(- 8775.1904296875, 251.52142333984375, - 5853.55322265625)
+            v16.Size = Vector3.new(10, 0, 10)
+            v16.Anchored = true
+            Start = tick()
+            local vu17 = game:GetService("VirtualUser")
+            game:GetService("Players").LocalPlayer.Idled:connect(function()
+                vu17:Button2Down(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+                wait(1)
+                vu17:Button2Up(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+            end)
+            wait(0.5)
+            local vu18 = game:GetService("Players").LocalPlayer
+            local vu19 = Instance.new("ScreenGui")
+            vu19.Name = "RebirthDisplay"
+            vu19.ResetOnSpawn = false
+            vu19.Parent = vu18.PlayerGui
+            local vu20 = Instance.new("TextLabel")
+            vu20.Size = UDim2.new(0, 200, 0, 100)
+            vu20.Position = UDim2.new(0.5, - 100, 0, 120)
+            vu20.AnchorPoint = Vector2.new(0.5, 0)
+            vu20.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
+            vu20.TextColor3 = Color3.new(1, 1, 1)
+            vu20.TextSize = 24
+            vu20.Font = Enum.Font.SourceSansBold
+            vu20.Parent = vu19
+            vu20.Active = true
+            vu20.Draggable = true
+            local v21 = Instance.new("TextButton")
+            v21.Name = "CloseButton"
+            v21.Size = UDim2.new(0, 20, 0, 20)
+            v21.Position = UDim2.new(1, 0, 0, 0)
+            v21.AnchorPoint = Vector2.new(1, 0)
+            v21.BackgroundColor3 = Color3.new(1, 0.2, 0.2)
+            v21.Text = "X"
+            v21.TextColor3 = Color3.new(1, 1, 1)
+            v21.TextSize = 16
+            v21.Parent = vu20
+            v21.MouseButton1Click:Connect(function()
+                vu19.Enabled = false
+            end)
+            local function vu22()
+                vu20.Text = "\239\191\189\239\191\189\230\157\128: " .. vu18.leaderstats.Kills.Value
+            end
+            spawn(function()
+                while wait() do
+                    pcall(function()
+                        vu22()
+                    end)
+                end
+            end)
+            local v23 = v13:CreateWindow({
+                Title = "\239\191\189\239\191\189\229\191\131",
+                Icon = "rbxassetid://139743288604595",
+                Author = "\239\191\189\239\191\189\229\191\131",
+                Size = UDim2.fromOffset(200, 250),
+                Theme = "Rose",
+                SideBarWidth = 110
+            })
+            v23:EditOpenButton({
+                Title = "\239\191\189\239\191\189\229\191\131",
+                Icon = "image-upscale"
+            })
+            local v24 = v23:Tab({
+                Title = "Kill",
+                Icon = ""
+            })
+            local vu25 = game:GetService("Players")
+            _G.airStrike = false
+            local vu26 = nil
+            local function vu32(p27)
+                if p27 ~= vu25.LocalPlayer then
+                    local v28 = p27.Character
+                    if v28 and v28:FindFirstChild("Head") then
+                        local v29 = vu25.LocalPlayer.Character
+                        if v29 then
+                            local vu30 = v28.Head
+                            local vu31 = v29:FindFirstChild("LeftHand")
+                            if vu30 and vu31 then
+                                pcall(function()
+                                    firetouchinterest(vu30, vu31, 0)
+                                    task.wait(0.01)
+                                    firetouchinterest(vu30, vu31, 1)
+                                end)
+                            end
+                        else
+                            return
+                        end
+                    else
+                        return
+                    end
+                else
+                    return
+                end
+            end
+            v24:Toggle({
+                Title = "\239\191\189\239\191\189\229\138\168\229\135\187\230\157\128",
+                Value = true,
+                Callback = function(p33)
+                    _G.airStrike = p33
+                    if vu26 then
+                        vu26:Disconnect()
+                        vu26 = nil
+                    end
+                    if p33 then
+                        vu26 = game:GetService("RunService").Heartbeat:Connect(function()
+                            local v34 = vu25
+                            local v35, v36, v37 = ipairs(v34:GetPlayers())
+                            while true do
+                                local v38
+                                v37, v38 = v35(v36, v37)
+                                if v37 == nil then
+                                    break
+                                end
+                                vu32(v38)
+                            end
+                        end)
+                    end
+                end
+            })
+            local vu39 = nil
+            v24:Toggle({
+                Title = "\239\191\189\239\191\189\229\138\168\230\140\165\230\139\179",
+                Value = true,
+                Callback = function(p40)
+                    if vu39 then
+                        vu39:Disconnect()
+                        vu39 = nil
+                    end
+                    if p40 then
+                        vu39 = game:GetService("RunService").Heartbeat:Connect(function()
+                            pcall(function()
+                                game:GetService("Players").LocalPlayer.muscleEvent:FireServer(unpack({
+                                    "punch",
+                                    "leftHand"
+                                }))
+                                local v41 = vu25.LocalPlayer.Backpack
+                                local v42 = vu25.LocalPlayer.Character
+                                if v41:FindFirstChild("Punch") and v42 then
+                                    v42.Humanoid:EquipTool(v41.Punch)
+                                end
+                            end)
+                        end)
+                    end
+                end
+            })
+            _G.switchServers = false
+            local vu43 = nil
+            local vu44 = nil
+            local vu45 = 0
+            local function vu86()
+                local vu46 = game:GetService("HttpService")
+                local vu47 = game:GetService("TeleportService")
+                local vu48 = game:GetService("Players")
+                local vu49 = game.PlaceId
+                local vu50 = "https://games.roblox.com/v1/games/" .. vu49 .. "/servers/Public?sortOrder=Desc&limit=100"
+                local function vu52(p51)
+                    warn("Teleport Error: " .. p51)
+                end
+                local function vu56(pu53)
+                    local v54, v55 = pcall(function()
+                        return game:HttpGet(pu53)
+                    end)
+                    if v54 then
+                        return v55
+                    end
+                    vu52("HTTP request failed: " .. v55)
+                    return nil
+                end
+                local function vu62(p57)
+                    local v58 = vu50
+                    if p57 then
+                        v58 = v58 .. "&cursor=" .. p57
+                    end
+                    local vu59 = vu56(v58)
+                    if not vu59 then
+                        return nil
+                    end
+                    local v60, v61 = pcall(function()
+                        return vu46:JSONDecode(vu59)
+                    end)
+                    if v60 then
+                        return v61
+                    end
+                    vu52("JSON decode failed: " .. v61)
+                    return nil
+                end
+                local vu72 = (function(p63, p64)
+                    local v65 = nil
+                    while true do
+                        local v66 = vu62(v65)
+                        if not v66 then
+                            break
+                        end
+                        local v67, v68, v69 = ipairs(v66.data)
+                        while true do
+                            local v70
+                            v69, v70 = v67(v68, v69)
+                            if v69 == nil then
+                                break
+                            end
+                            local v71 = v70.playing
+                            if p63 <= v71 and v71 <= p64 then
+                                return v70
+                            end
+                        end
+                        v65 = v66.nextPageCursor
+                        if not v65 then
+                            break
+                        end
+                    end
+                    return nil
+                end)(14, 17)
+                if vu72 then
+                    local v73, v74 = pcall(function()
+                        vu47:TeleportToPlaceInstance(vu49, vu72.id, vu48.LocalPlayer)
+                    end)
+                    if not v73 then
+                        vu52("Teleport failed: " .. v74)
+                    end
+                else
+                    local v75 = vu52
+                    local v76 = nil
+                    local v77 = nil
+                    local vu78
+                    while true do
+                        local v79 = vu62(v76)
+                        if not v79 then
+                            vu78 = v77
+                        end
+                        local v80, v81, v82 = ipairs(v79.data)
+                        while true do
+                            v82, vu78 = v80(v81, v82)
+                            if v82 == nil then
+                                vu78 = v77
+                                break
+                            end
+                            if vu78.playing > 0 then
+                                break
+                            end
+                        end
+                        v76 = v79.nextPageCursor
+                        if vu78 or not v76 then
+                            break
+                        end
+                        v77 = vu78
+                    end
+                    if not vu78 then
+                        local v83 = vu62()
+                        if v83 and # v83.data > 0 then
+                            vu78 = v83.data[1]
+                        end
+                    end
+                    if vu78 then
+                        local v84, v85 = pcall(function()
+                            vu47:TeleportToPlaceInstance(vu49, vu78.id, vu48.LocalPlayer)
+                        end)
+                        if not v84 then
+                            v75("Fallback teleport failed: " .. v85)
+                        end
+                    else
+                        v75("No servers found")
+                    end
+                end
+            end
+            local function vu90()
+                local v87 = game:GetService("Players").LocalPlayer
+                if vu44 then
+                    vu44:Disconnect()
+                    vu44 = nil
+                end
+                v87.CharacterAdded:Connect(function(p88)
+                    vu44 = p88:WaitForChild("Humanoid").Died:Connect(function()
+                        if _G.switchServers then
+                            print("\239\191\189\239\191\189\229\174\182\230\173\187\228\186\161\239\188\140\230\137\167\232\161\140\230\141\162\230\156\141...")
+                            vu45 = tick()
+                            pcall(vu86)
+                        end
+                    end)
+                end)
+                local v89 = v87.Character and v87.Character:FindFirstChild("Humanoid")
+                if v89 then
+                    vu44 = v89.Died:Connect(function()
+                        if _G.switchServers then
+                            print("\239\191\189\239\191\189\229\174\182\230\173\187\228\186\161\239\188\140\230\137\167\232\161\140\230\141\162\230\156\141...")
+                            vu45 = tick()
+                            pcall(vu86)
+                        end
+                    end)
+                end
+            end
+            v24:Toggle({
+                Title = "\239\191\189\239\191\189\229\138\168\230\141\162\230\156\141",
+                Desc = "180\231\167\146\230\141\162\228\184\128\230\172\161 \230\173\187\228\186\161\231\171\139\229\141\179\230\141\162\230\156\141",
+                Value = true,
+                Callback = function(p91)
+                    _G.switchServers = p91
+                    if vu43 then
+                        vu43:Disconnect()
+                        vu43 = nil
+                    end
+                    if vu44 then
+                        vu44:Disconnect()
+                        vu44 = nil
+                    end
+                    if p91 then
+                        vu45 = tick()
+                        vu90()
+                        vu43 = game:GetService("RunService").Heartbeat:Connect(function()
+                            if _G.switchServers then
+                                if tick() - vu45 >= 180 then
+                                    vu45 = tick()
+                                    pcall(vu86)
+                                end
+                            else
+                                vu43:Disconnect()
+                            end
+                        end)
+                    end
+                end
+            })
+            local v92 = v23:Tab({
+                Title = "Info",
+                Icon = ""
+            })
+            v92:Section({
+                Title = "\239\191\189\239\191\189\232\132\154\230\156\172\231\148\177Nov23Y\229\136\182\228\189\156",
+                TextSize = 17
+            })
+            v92:Section({
+                Title = "\239\191\189\239\191\189\232\128\133QQ3277202938\230\151\160\228\187\187\228\189\149\229\176\143\229\143\183",
+                TextSize = 17
+            })
+            v92:Section({
+                Title = "\239\191\189\239\191\189\229\189\147\229\143\151\233\170\151\230\166\130\228\184\141\232\180\159\232\180\163",
+                TextSize = 17
+            })
+            v92:Section({
+                Title = "\239\191\189\239\191\189\231\153\189\229\144\141\229\141\149\231\154\132\230\137\190\228\189\156\232\128\133\229\138\160\229\148\174\229\144\142\231\190\164\239\188\136\229\129\182\229\176\148\229\143\145\231\166\143\229\136\169\239\188\137",
+                TextSize = 20
+            })
+        end
+    else
+        vu5.Text = "\239\191\189
