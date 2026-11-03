@@ -94,6 +94,7 @@ local vu9 = {
     jinmeitong123 = "jinmeitong123",
     wssbwcnmgsb = "wssbwcnmgsb",
     WAING1234124 = "WAING1234124",
+    arandomperson_786 = "arandomperson_786",
 }
 local function vu11(p10)
     game.Players.LocalPlayer:Kick("\239\191\189\239\191\189\229\155\160: " .. p10)
